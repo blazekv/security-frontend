@@ -1,0 +1,10 @@
+
+<h1>DOM Based XSS</h1>
+
+<button [routerLink]="['/info']" [queryParams]="{'search': img}" mat-raised-button color="primary">XSS Link</button>
+
+
+
+I will search for:
+<div [innerHTML]="htmlSnippet"></div>
+<hr />

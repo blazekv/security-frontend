@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "security-xss": {
+      "hosting": {
+        "security-frontend": [
+          "security-xss"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "security-xss"
+  }
+}

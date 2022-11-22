@@ -1,0 +1,15 @@
+
+<h1>Reflected XSS</h1>
+
+<button [routerLink]="['/search']" [queryParams]="{'search': img}" mat-raised-button color="primary">XSS Link</button>
+
+
+I will search for:
+<div [innerHTML]="htmlSnippet"></div>
+<hr />
+
+<h3>Results</h3>
+<div *ngFor="let result of results">
+  {{result}}
+</div>
+

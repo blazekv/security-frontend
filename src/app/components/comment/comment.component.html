@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="addComment()">
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>Show me what you got</mat-label>
+    <textarea #area matInput formControlName="content" ></textarea>
+  </mat-form-field>
+  <button type="submit" [disabled]="form.invalid" mat-raised-button >Comment it!</button>
+
+</form>
+
+
+<mat-card *ngFor="let comment of (comments$ | async)">
+  <mat-card-title>{{comment.author}}</mat-card-title>
+  <mat-card-content [innerHTML]="sanitizer.bypassSecurityTrustHtml(comment.content)">
+
+  </mat-card-content>
+</mat-card>

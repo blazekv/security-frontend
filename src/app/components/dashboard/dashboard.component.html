@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill">
+  <mat-label>Show me what you got</mat-label>
+  <textarea #area matInput ></textarea>
+</mat-form-field>
+
+<button mat-raised-button (click)="text = area.value">Set</button>
+
+<!-- <div #element></div> -->
+
+
+<div [innerHTML]="sanitizer.bypassSecurityTrustHtml(text)"></div>
